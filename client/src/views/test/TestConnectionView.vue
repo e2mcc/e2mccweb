@@ -16,15 +16,13 @@ export default {
 	methods: {
 		async getBackendNumber() {
 			console.log("已调用 getBackendNumber 方法");
-			
-			const api = axios.create({
-				baseURL: 'http://43.159.53.99:3000',
-				//withCredentials属性指定是否将凭据（例如 cookies）包括在跨域请求中。
-				withCredentials: false,
-			});
-			
+			const BackendURL='http://43.159.53.99';
+			const BackendPort = 3000;
+			const BackendAPI = 'f2b';
+			const BackendResponser = 'testconnection';
+			const Backend = `${BackendURL}:${BackendPort}/${BackendAPI}/${BackendResponser}`;
 			try {
-				const response = await api.get('/f2b/testconnection');
+				const response = await axios.get(Backend);
 				console.log(response.data);
 				this.FrontendNumber = response.data.BackendNum;
 			} catch (error) {

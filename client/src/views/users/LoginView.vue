@@ -59,15 +59,15 @@ export default {
 	methods: {
 		async onSubmit() {
 			console.log('已调用 onSubmit 方法');
-			
-			const api = axios.create({
-				baseURL: 'http://43.159.53.99:3000',
-				//withCredentials属性指定是否将凭据（例如 cookies）包括在跨域请求中。
-				withCredentials: true,
-			});
+
+			const BackendURL='http://43.159.53.99';
+			const BackendPort = 3000;
+			const BackendAPI = 'f2b';
+			const BackendResponser = 'testconnection';
+			const Backend = `${BackendURL}:${BackendPort}/${BackendAPI}/${BackendResponser}`;
 
 			try {
-				const response = await api.post('/f2b/login', {
+				const response = await axios.post(Backend, {
 					email:this.user.email,
 					password:this.user.password
 				});
