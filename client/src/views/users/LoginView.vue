@@ -58,15 +58,20 @@ export default {
 
 	methods: {
 		async onSubmit() {
-			console.log('123');
+			console.log('已调用 onSubmit 方法');
 			
 			const api = axios.create({
-				baseURL: 'http://localhost:3000',
-				withCredentials: true, // 允许发送跨域请求
+				baseURL: 'http://43.159.53.99:3000',
+				//withCredentials属性指定是否将凭据（例如 cookies）包括在跨域请求中。
+				withCredentials: true,
 			});
 
 			try {
-				const response = await api.post('/api/login', this.user);
+				const response = await api.post('/f2b/login', {
+					email:this.user.email,
+					password:this.user.password
+				});
+
 				// 判断axios.post返回的 json 的内容
 				// if ('message' in response.data){
 				// 	console.log(response.data.message);
@@ -80,7 +85,6 @@ export default {
 				// }
 				console.log(response.data);
 			} catch (error) {
-				// Display an error message.
 				console.error(error);
 			}
 		},

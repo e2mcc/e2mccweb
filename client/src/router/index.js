@@ -1,34 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/LoginView.vue'
-import RegisterView from '../views/RegisterView.vue'
-import ChatView from '../views/ChatView.vue'
 
 const routes = [
 
 	{
 		path: '/',
-		name: 'HomeView',
-		component: HomeView
+		component: ()=>import("@/views/HomeView.vue"),
 	},
 	
 	{
 		path: '/login',
-		name: 'LoginView',
-		component: LoginView
+		component: ()=>import("@/views/users/LoginView.vue"),
 	},
 
 
 	{
 		path: '/register',
-		name: 'RegisterView',
-		component: RegisterView
+		component: ()=>import("@/views/users/RegisterView.vue"),
 	},
 
 	{
 		path: '/chat',
-		name: 'ChatView',
-		component: ChatView
+		component: ()=>import("@/views/chat/ChatView.vue"),
+	},
+
+	{
+		path: '/test',
+		component: ()=>import("@/views/test/TestConnectionView.vue"),
 	},
 
 ]
