@@ -19,11 +19,6 @@ const routes = [
 	},
 
 	{
-		path: '/chat',
-		component: ()=>import("@/ExternalSource4Chat/views/ChatGPT.vue"),
-	},
-
-	{
 		path: '/test',
 		component: ()=>import("@/views/test/TestConnectionView.vue"),
 	},
