@@ -79,10 +79,19 @@ export default {
 				if('token'in response.data){
 					// 获得 token
 					const token = response.data.token;
+					const authcode = response.data.authcode;
+					console.log(token);
+					console.log(authcode);
 					// 将令牌保存到本地存储以备日后使用。
 					localStorage.setItem('token', token);
-					// 重定向至 "/chat" 页面
-					this.$router.push('/chat');
+					if(authcode===7){
+						// 重定向至 "/test2" 页面
+						this.$router.push('/test2');
+					}else{
+						// 重定向至 "/chat" 页面
+						this.$router.push('/chat');
+					}
+					
 				}else{
 					//获取后端发送的errmsg,并且错误数+1
 					this.errormsg = response.data.errmsg;
