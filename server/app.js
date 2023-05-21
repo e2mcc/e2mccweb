@@ -34,6 +34,12 @@ app.use('/f2b/login',LoginRouter);
 // const RegisterRouter = require('./routes/user/register.js');
 // app.use('/f2b/register', RegisterRouter);
 
-//chat
+//注册user路由
+const ChatRouter = require('./routes/chat/chat.js');
+app.use('/f2b/chat',ChatRouter);
+
+
+
+
 
 module.exports = app;
