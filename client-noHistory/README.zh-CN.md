@@ -1,4 +1,5 @@
-# ChatGPT Web Bot
+# 来自https://github.com/Chanzhaoyu/chatgpt-web
+# 版本 1.0.3
 
 [English](./README.md) | 中文
 
