@@ -1,5 +1,5 @@
 # 来自[Chanzhaoyu的chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web)
-# 版本 1.0.5 的 Release: [v1.0.4](https://github.com/Chanzhaoyu/chatgpt-web/releases/tag/v1.0.5)
+# 版本 1.0.5 的 Release: [v1.0.5](https://github.com/Chanzhaoyu/chatgpt-web/releases/tag/v1.0.5)
 
 中文 | [English](./README.en.md)
 
